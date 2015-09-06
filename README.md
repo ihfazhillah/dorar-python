@@ -8,3 +8,10 @@ Dan [dorar.net](http://dorar.net) sendiri adalah website yang diasuh oleh Asy Sy
 - Akhlak
 - Dsb, bisa di lihat di websitenya
 
+## Installasi
+
+Untuk installasi anda dapat melihatnya di [instalasi](https://github.com/ihfazhillah/dorar-python/wiki/Instalasi)
+
+## Cara Penggunaan
+
+Anda bisa langsung mengaksesnya di [Fungsi](https://github.com/ihfazhillah/dorar-python/wiki/Fungsi)
