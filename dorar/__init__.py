@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import re
 
 def splitList(listasli, berapapotongan):
+    berapapotongan = int(berapapotongan)
     finalList = [listasli[i:i+berapapotongan] for i in range(0, len(listasli), berapapotongan)]
     return finalList
 
