@@ -3,6 +3,9 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
+def splitList(listasli, berapapotongan):
+    finalList = [listasli[i:i+berapapotongan] for i in range(0, len(listasli), berapapotongan)]
+    return finalList
 
 class Dorar:
     def __init__(self):
@@ -41,12 +44,16 @@ class Dorar:
             infos.append(hasil1)
         return infos
 
-    def searchHadith(self, cari):
+    def searchHadith(self, cari, jumlah=None):
         text = self.openHadithApi(cari)
         hadith = self.getHadith(text)
         info = self.getInfo(text)
-        hasil = []
-        for x in range(len(hadith)):
-            y = hadith[x] + "\n" +info[x]
-            hasil.append(y)
-        return "\n\n".join(hasil)
+        hasil = [hadith_text+"\n"+info[numb] 
+        for numb, hadith_text in enumerate(hadith)]
+        if jumlah == None:
+            return hasil
+        else:
+            return splitList(hasil, jumlah)
+        
+
+            
