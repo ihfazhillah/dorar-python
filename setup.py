@@ -1,12 +1,12 @@
 from setuptools import setup
 
 setup(name='dorar',
-      version='0.1',
-      description='dorar, menggunakan dorar.net ',
+      version='1.1',
+      description='Search Hadith Module ',
       url='https://github.com/ihfazhillah/dorar-python.git',
       author='IbnuAmin',
       author_email='mihfazhillah@gmail.com',
       license='GNU2',
       packages=['dorar'],
-      scripts=['usr/bin/dorar'],
-      zip_safe=False)
+      scripts=['bin/dorar'],
+      zip_safe=True)

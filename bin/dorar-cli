@@ -1,0 +1,18 @@
+#!/usr/bin/python2
+from dorar import Dorar
+import argparse
+import sys
+
+parser = argparse.ArgumentParser(
+description="Search Hadith from Dorar Cli")
+
+parser.add_argument('textsearch',
+help = "Type hadith you want to search, arabic only")
+
+args = parser.parse_args()
+
+dorar = Dorar()
+hasil = dorar.searchHadith(args.textsearch)
+
+map(sys.stdout.write , hasil)
+
