@@ -20,15 +20,15 @@ args = parser.parse_args()
 
 dorar = Dorar()
 hasil = dorar.searchHadith(args.textsearch)
-
+hasil = [x.encode("utf-8") for x in hasil]
 
 
 if args.silent and args.output:
     with open(args.output[0], "a") as outp:
-        map(outp.write, hasil.encode('utf-8'))
+        map(outp.write, hasil)
 elif args.output:
     with open(args.output[0], "a") as outp:
-        map(outp.write, hasil.encode("utf-8"))
+        map(outp.write, hasil)
         map(sys.stdout.write, hasil)
 else:
     map(sys.stdout.write, hasil)
