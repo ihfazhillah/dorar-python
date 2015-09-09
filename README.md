@@ -8,6 +8,10 @@ Dan [dorar.net](http://dorar.net) sendiri adalah website yang diasuh oleh Asy Sy
 - Akhlak
 - Dsb, bisa di lihat di websitenya
 
+## Rilisan
+
+- [Rilis v1.1](https://github.com/ihfazhillah/dorar-python/releases/tag/1.1) **9-9-2015**
+
 ## Installasi
 
 Untuk installasi anda dapat melihatnya di [instalasi](https://github.com/ihfazhillah/dorar-python/wiki/Instalasi)
