@@ -8,5 +8,5 @@ setup(name='dorar',
       author_email='mihfazhillah@gmail.com',
       license='GNU2',
       packages=['dorar'],
-      scripts=['bin/dorar'],
+      scripts=['bin/dorar-cli'],
       zip_safe=True)
