@@ -1,4 +1,5 @@
 #!/usr/bin/python2
+
 from dorar import Dorar
 import argparse
 import sys
@@ -8,11 +9,26 @@ description="Search Hadith from Dorar Cli")
 
 parser.add_argument('textsearch',
 help = "Type hadith you want to search, arabic only")
+parser.add_argument("--output", "-o", nargs=1, 
+dest="output", action="store",
+help="File you want to store result")
+parser.add_argument("--silent", "-s", dest="silent",
+action="store_true", default=False,
+help="Dont show the result in terminal")
 
 args = parser.parse_args()
 
 dorar = Dorar()
 hasil = dorar.searchHadith(args.textsearch)
 
-map(sys.stdout.write , hasil)
 
+
+if args.silent and args.output:
+    with open(args.output[0], "a") as outp:
+        map(outp.write, hasil.encode('utf-8'))
+elif args.output:
+    with open(args.output[0], "a") as outp:
+        map(outp.write, hasil.encode("utf-8"))
+        map(sys.stdout.write, hasil)
+else:
+    map(sys.stdout.write, hasil)
